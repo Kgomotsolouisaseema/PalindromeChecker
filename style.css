@@ -1,0 +1,22 @@
+*{
+    background-color: rgb(255, 229, 196);  
+}
+
+.result {
+margin-top: 10px;
+font-weight: bold;
+background-color: rgb(255, 153, 0);
+}
+
+h1{
+font-size: auto;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-display:center;
+margin: flex;
+}
+
+h3{
+    font-size: auto;
+    font-style: italic;
+
+}

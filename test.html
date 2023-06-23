@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Palindrome Checker</title>
+    <style>
+      .result {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Palindrome Checker</h2>
+    <input type="text" id="textInput" />
+    <button onclick="checkPalindrome()">Check</button>
+
+    <h3>Previously Checked Words:</h3>
+    <ul id="resultsList"></ul>
+
+    <script>
+      const results = [];
+
+      function checkPalindrome() {
+        const input = document.getElementById("textInput");
+        const word = input.value.trim();
+
+        if (!word) {
+          alert("Please enter a word.");
+          return;
+        }
+
+        const result = isPalindrome(word);
+        displayResult(word, result);
+        input.value = "";
+      }
+
+      function isPalindrome(word) {
+        const reversed = word.split("").reverse().join("");
+        return word.toLowerCase() === reversed.toLowerCase();
+      }
+
+      function displayResult(word, isPalindrome) {
+        const resultsList = document.getElementById("resultsList");
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `${word}: ${isPalindrome ? "Palindrome" : "Not a Palindrome"}`;
+
+        resultsList.prepend(listItem);
+      }
+    </script>
+  </body>
+</html>
